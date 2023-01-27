@@ -1,0 +1,355 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Soft orange: hsl(35, 77%, 62%)
+- Soft red: hsl(5, 85%, 63%)
+
+### Neutral
+
+Off-white: hsl(36, 100%, 99%)
+Grayish blue: hsl(233, 8%, 79%)
+Dark grayish blue: hsl(236, 13%, 42%)
+Very dark blue: hsl(240, 100%, 5%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 15px
+
+### Font
+
+font-family: 'Inter', sans-serif;
+- Family: [Inter](https://fonts.google.com/specimen/Inter)
+- Weights: 400, 700, 800 */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 40px 100px;
+    font-family: 'Inter', sans-serif;
+    background-color: hsl(36, 100%, 99%);
+}
+
+.header_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header{
+    margin-bottom: 50px;
+}
+
+nav ul{
+    display: flex;
+
+}
+
+nav li{
+    list-style: none;
+    padding: 0px 15px;
+}
+
+nav a{
+    text-decoration: none;
+    color: hsl(240, 1%, 37%);
+    font-size: 15px;
+}
+
+nav a:hover{
+    color: hsl(5, 85%, 63%);
+}
+
+.menu{
+    display: none;
+}
+
+
+/*HERO*/
+
+.hero_container{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.left_container{
+    max-width: 800px;
+}
+
+.left_image{
+    width: 100%;
+    height: auto;
+}
+
+.mobile_left_image{
+    display: none;
+}
+
+.bottom_container{
+    display: flex;
+    margin-top: 30px;
+    gap: 70px;
+}
+
+.bottom_container h1{
+    font-size: 55px;
+    max-width: 300px;
+    font-weight: 800;
+    color: hsl(240, 100%, 5%);
+}
+
+.bottom_paragraph{
+    font-size: 16px;
+    line-height: 27px;
+    color: hsl(240, 1%, 37%);
+} 
+
+button{
+    font-family:'Inter', sans-serif;;
+    color: white;
+    background-color: hsl(5, 85%, 63%);
+    border: none;
+    text-transform: uppercase;
+    padding: 15px 25px;
+    margin-top: 50px;
+    letter-spacing: 5px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover{
+    color: white;
+    background-color: hsl(240, 100%, 5%);
+    transition: .50s;
+}
+
+/*RIGHT CONTAINER*/
+
+.right_container{
+    background-color: hsl(240, 100%, 5%);
+    padding: 30px 25px 0px 25px;
+}
+
+.right_container h3{
+    color: hsl(35, 77%, 62%);
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.article_container h4{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: white;
+}
+
+.article_container h4:hover{
+    color: hsl(35, 77%, 62%);
+    cursor: pointer;
+    transition: .50s;
+}
+
+.article_container p{
+    color: hsla(36, 100%, 99%, 0.76);
+    margin-bottom: 40px;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.article_container hr{
+    color: hsl(240, 1%, 37%);
+}
+
+/*FLEX*/
+
+.flex_container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex_image{
+    max-width: 100px;
+    height: auto;
+}
+
+.first_flex, .second_flex, .third_flex{
+    display: flex;
+}
+
+.flex_container article{
+    margin: 0 20px;
+}
+
+.flex_container h3{
+    color: hsla(36, 3%, 30%, 0.582);
+    font-size: 26px;
+}
+
+.flex_container h2{
+    margin: 10px 0px;
+    font-size: 18px;
+}
+
+.flex_container h2:hover{
+    color: hsl(5, 85%, 63%);
+    cursor: pointer;
+    transition: .50s;
+}
+
+.flex_container p{
+    color: hsl(240, 1%, 37%);
+    line-height: 25px;
+}
+
+/*MEDIA*/
+
+@media screen and (max-width: 800px) {
+
+    .mobile_left_image{
+        display: block;
+        width: 100%;
+    }
+
+    .left_image{
+        display: none;
+    }
+        
+    body{
+        margin: 40px 20px;
+        font-family: 'Inter', sans-serif;
+        background-color: hsl(36, 100%, 99%);
+    }
+    
+    .menu{
+        display: block;
+        position: relative;
+        cursor: pointer;
+        z-index: 2;
+        width: 50px;
+    }
+    
+    .nav_menu{
+        position: fixed;
+        background-color: white;
+        right: -300px;
+        top: 0px;
+        height: 100%;
+        width: 20%;
+        z-index: 1;
+        transition: 1.5s ease-in-out;  
+    }
+
+    .nav_menu.active{
+        right: 0;
+        width: 70%;
+    }
+
+    .nav_menu ul{
+        flex-direction: column;
+        margin-top: 200px;
+    }
+
+    .nav_menu li{
+        padding: 0px 40px 30px 40px;
+    }
+
+    .nav_menu a{
+        text-decoration: none;
+        color: hsl(240, 100%, 5%);
+        font-size: 24px;
+    }
+
+    /*MIDDLE*/
+
+        
+    .hero_container{
+        display: block;
+        margin-bottom: 60px;
+    }
+
+    .left_container{
+        max-width: 800px;
+    }
+
+    .left_image{
+        width: 100%;
+        height: auto;
+    }
+
+    .bottom_container{
+        display: block;
+    }
+
+    .bottom_container h1{
+        max-width: 400px;
+        margin-bottom: 20px;
+    }
+
+    .bottom_paragraph{
+        font-size: 16px;
+        line-height: 27px;
+        color: hsl(240, 1%, 37%);
+    } 
+
+    button{
+        margin: 30px 0px;
+    }
+
+    button:hover{
+        color: white;
+        background-color: hsl(240, 100%, 5%);
+        transition: .50s;
+    }
+
+    /*RIGHT CONTAINER*/
+
+    .right_container{
+        padding-bottom: 20px;
+    }
+
+    /*FLEX*/
+
+    .flex_container{
+        display: block;
+    }
+
+    .flex_image{
+        width: 150px;
+        height: auto;
+    }
+
+    .first_flex, .second_flex, .third_flex{
+        margin-bottom: 50px;
+    }
+
+    .third_flex{
+        margin-bottom: 80px;
+    }
+
+    .flex_container h3{
+        font-size: 28px;
+    }
+
+    .flex_container h2{
+        margin: 10px 0px;
+        font-size: 18px;
+    }
+}
+
+
